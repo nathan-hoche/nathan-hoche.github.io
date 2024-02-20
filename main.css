@@ -14,6 +14,10 @@ a:link {
     text-decoration: none;
 }
 
+.list-group-item:hover {
+    opacity: 70%;
+}
+
 #content {
     width: 75%;
     margin-left: auto;
