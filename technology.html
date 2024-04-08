@@ -33,16 +33,22 @@
         </nav>
         <br><br><br>
         <div id="content">
+            <div class="alert alert-info" role="alert">
+                This page list the technologies I used for multiple months and projects for the last 5 years. You can click on them if you want to know more about the technology!
+            </div>
+            <div class="alert alert-warning" role="alert">
+                I did not put all technologies, I skipped technologies which I had practiced multiple time but without remembering how to use them (such as ASM or Kubernetes). Also, I only wrote the most important libraries, in order to let this page being readable.
+            </div>
             <div id="btn-list">
-                <button id="sbtn-1" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['language'], '1')">Language</button>
                 <button id="sbtn-2" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['deep-learning', 'machine-learning'], '2')">AI</button>
                 <button id="sbtn-3" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['data-viz', 'data-man', 'data-type', 'database', 'web-scraping'], '3')">Data</button>
-                <button id="sbtn-4" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['os', 'ide', 'project-man', 'project-com', 'research'], '4')">SoftSkill</button>
-                <button id="sbtn-5" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['web-backend', 'web-frontend'], '5')">Web</button>
-                <button id="sbtn-6" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['software'], '6')">Software</button>
-                <button id="sbtn-7" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['mobile'], '7')">Mobile</button>
                 <button id="sbtn-8" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['devops'], '8')">DevOps</button>
+                <button id="sbtn-7" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['mobile'], '7')">Mobile</button>
+                <button id="sbtn-1" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['language'], '1')">Language</button>
                 <button id="sbtn-9" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['simulation'], '9')">Simulation</button>
+                <button id="sbtn-4" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['os', 'ide', 'project-man', 'project-com', 'research'], '4')">SoftSkill</button>
+                <button id="sbtn-6" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['software'], '6')">Software</button>
+                <button id="sbtn-5" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['web-backend', 'web-frontend'], '5')">Web</button>
             </div>
             <script lang="js">
                 function dct(list, btnID) {
@@ -103,6 +109,10 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/1024px-CSS3_logo.svg.png" />
                         <h2>CSS</h2>
                     </a>
+                    <a href="" class="icon-block" style="--color: #5c5284">
+                        <img src="https://d4.alternativeto.net/gG5itjEvu3v2gm1J9O-5YrkcBoJzTZSL3WBNo-jA6Ao/rs:fit:280:280:0/g:ce:0:0/exar:1/YWJzOi8vZGlzdC9pY29ucy9oYXNrZWxsXzIwNjM0NS5wbmc.png" />
+                        <h2>Haskell</h2>
+                    </a>
                 </div>
             </div>
             <div id="deep-learning">
@@ -135,6 +145,12 @@
                         <img id="tensorrt" src="https://assets.nvidiagrid.net/ngc/logos/Tensorrt.png" />
                         <h2 id="tensorrt-img">TensorRT</h2>
                     </a>
+                    <a href="https://opencv.org/" class="icon-block" style="--color: #148cfc">
+                        <img src="https://github.com/opencv/opencv/wiki/logo/OpenCV_logo_no_text.png" />
+                        <h2>OpenCV</h2>
+                    </a>
+
+                    
                 </div>
             </div>
             <div id="machine-learning">
@@ -222,7 +238,7 @@
                     </a>
                     <a href="https://mui.com/" class="icon-block" style="--color: #047cfc">
                         <img src="https://mui.com/static/logo.png" />
-                        <h2>Mui</h2>
+                        <h2 >Mui</h2>
                     </a>
                 </div>
             </div>
@@ -258,7 +274,7 @@
                     </a>
                     <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="icon-block" style="--color: #040404">
                         <img src="https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/6.1.jpg" />
-                        <h2>Beautiful Soup</h2>
+                        <h2 style="top: -85px">Beautiful Soup</h2>
                     </a>
                     <a href="https://pptr.dev/" class="icon-block" style="--color: #04daa2">
                         <img src="https://www.svgrepo.com/show/354228/puppeteer.svg" />
@@ -283,6 +299,10 @@
                     <a href="https://about.gitlab.com/" class="icon-block" style="--color: #fb6d24">
                         <img src="https://cdn.iconscout.com/icon/free/png-256/free-gitlab-282507.png?f=webp" />
                         <h2>Gitlab</h2>
+                    </a>
+                    <a href="https://conda.org/" class="icon-block" style="--color: #44b32c">
+                        <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_conda_icon_130674.png" />
+                        <h2>Conda</h2>
                     </a>
                     <a href="https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=144583572237&campaign=19313890934&creative=641977829458&device=c&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p74602912889&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xTC_DU-3AMQczoLOwdQ3DKRCBgw2rdp3FRIE9_NuzqXus7c17PvTYEaAsHCEALw_wcB&gclsrc=aw.ds" class="icon-block" style="--color: #136ce4">
                         <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png" />
@@ -350,7 +370,7 @@
                     </a>
                     <a href="https://developer.android.com/studio" class="icon-block" style="--color: #4383f2">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Android_Studio_Logo_%282023%29.svg/1200px-Android_Studio_Logo_%282023%29.svg.png" />
-                        <h2>Android Studio</h2>
+                        <h2 style="top: -85px" >Android Studio</h2>
                     </a>
                 </div>
             </div>
@@ -362,11 +382,11 @@
                 <div class="technoBlock list-group">
                     <a href="https://scholar.google.com/" class="icon-block" style="--color: #3c78dc">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/768px-Google_Scholar_logo.svg.png" />
-                        <h2>Google Scholar</h2>
+                        <h2 style="top: -85px">Google Scholar</h2>
                     </a>
                     <a href="https://paperswithcode.com/sota" class="icon-block" style="--color: #28cccc">
                         <img src="https://paperswithcode.com/static/logo.png" />
-                        <h2>Paper with code</h2>
+                        <h2 style="top: -85px">Paper with code</h2>
                     </a>
                     <a href="https://www.kaggle.com/" class="icon-block" style="--color: #28bcfc">
                         <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" />
@@ -432,6 +452,10 @@
                     <a href="https://www.ros.org/" class="icon-block" style="--color: #15253e">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Robot_Operating_System_logo.svg/800px-Robot_Operating_System_logo.svg.png" />
                         <h2>ROS2</h2>
+                    </a>
+                    <a href="https://gymnasium.farama.org/" class="icon-block" style="--color: #040404">
+                        <img src="https://gymnasium.farama.org/_static/img/gymnasium_black.svg" />
+                        <h2>Gymnasium</h2>
                     </a>
                     <a href="https://unity.com/fr" class="icon-block" style="--color: #040404">
                         <img src="https://cdn.freebiesupply.com/logos/large/2x/unity-69-logo-black-and-white.png" />
