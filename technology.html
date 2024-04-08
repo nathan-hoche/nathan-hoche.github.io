@@ -33,64 +33,453 @@
         </nav>
         <br><br><br>
         <div id="content">
-            <br>
-            <h2>Deep Learning</h2>
-            <br>
-
-            <div class="technoBlock list-group">
-                <a href="https://pytorch.org" class="icon-block" style="--color: #ec4c2c">
-                    <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-linuxhq/events/PyTorch_Symbol_01_OrangeOnTransparent_nUWxXkQ.png" />
-                    <h2>Pytorch</h2>
-                </a>
-                <a href="https://keras.io" class="icon-block" style="--color: #d40505">
-                    <img src="https://www.logiciels.pro/wp-content/uploads/2021/05/keras-avis-prix-alternatives-logiciel.webp" />
-                    <h2>Keras</h2>
-                </a>
-                <a href="https://www.tensorflow.org/?hl=fr" class="icon-block" style="--color: #fc8c07">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/langfr-220px-Tensorflow_logo.svg.png" />
-                    <h2>Tensorflow</h2>
-                </a>
-                <a href="https://huggingface.co" class="icon-block" style="--color: #fbd31b">
-                    <img src="https://community.intersystems.com/sites/default/files/inline/images/sticker-2048w.png" />
-                    <h2>Huggingface</h2>
-                </a>
-                <a href="https://onnx.ai" class="icon-block" style="--color: #343434">
-                    <img src="https://artwork.lfaidata.foundation/projects/onnx/icon/color/onnx-icon-color.png" />
-                    <h2>Onnx</h2>
-                </a>
-                <a href="https://developer.nvidia.com/tensorrt" class="icon-block" style="--color: #78b80a">
-                    <img id="tensorrt" src="https://assets.nvidiagrid.net/ngc/logos/Tensorrt.png" />
-                    <h2 id="tensorrt-img">TensorRT</h2>
-                </a>
+            <div id="btn-list">
+                <button id="sbtn-1" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['language'], '1')">Language</button>
+                <button id="sbtn-2" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['deep-learning', 'machine-learning'], '2')">AI</button>
+                <button id="sbtn-3" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['data-viz', 'data-man', 'data-type', 'database', 'web-scraping'], '3')">Data</button>
+                <button id="sbtn-4" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['os', 'ide', 'project-man', 'project-com', 'research'], '4')">SoftSkill</button>
+                <button id="sbtn-5" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['web-backend', 'web-frontend'], '5')">Web</button>
+                <button id="sbtn-6" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['software'], '6')">Software</button>
+                <button id="sbtn-7" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['mobile'], '7')">Mobile</button>
+                <button id="sbtn-8" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['devops'], '8')">DevOps</button>
+                <button id="sbtn-9" type="button" style="background-color: white; color: black" class="btn btn-outline-light" onclick="dct(['simulation'], '9')">Simulation</button>
             </div>
-            <br>
-            <h2>Machine Learning</h2>
-            <br>
+            <script lang="js">
+                function dct(list, btnID) {
+                    list.forEach(updt => {
+                        var elem = document.getElementById(updt);
+                        if (elem.style["opacity"] == 1 || elem.style.opacity == "") {
+                            console.log("Opacity -> 0")
+                            elem.setAttribute("style", "opacity: 0; position: fixed; top: -500")
+                        } else {
+                            console.log("Opacity -> 1")
+                            elem.setAttribute("style", "opacity: 1; position: relative;")
+                        }
+                    });
 
-            <div class="technoBlock list-group">
-                <a href="https://scikit-learn.org/stable/" class="icon-block" style="--color: #2596be">
-                    <img src="https://www.ambient-it.net/wp-content/uploads/2018/07/scikit-learn-175.png" />
-                    <h2>Scikit-learn</h2>
-                </a>
-                
+                    var elem = document.getElementById("sbtn-" + btnID);
+                    console.log(elem)
+                    if (elem.style.backgroundColor == "white")
+                        elem.setAttribute("style", 'background-color: #1c1c1c; color: white')
+                    else
+                        elem.setAttribute("style", 'background-color: white; color: black')
+                }
+            </script>
+            <div id="language">
+                <br>
+                <h2>Language</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://www.python.org" class="icon-block" style="--color: #33638c">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png?f=webp" />
+                        <h2>Python</h2>
+                    </a>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" class="icon-block" style="--color: #f3db1c">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" />
+                        <h2>Javascript</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/C_(langage)" class="icon-block" style="--color: #aabbce">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/1200px-The_C_Programming_Language_logo.svg.png" />
+                        <h2>C</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/C%2B%2B" class="icon-block" style="--color: #639bd3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" />
+                        <h2>C++</h2>
+                    </a>
+                    <a href="https://www.java.com/en/download/help/whatis_java.html" class="icon-block" style="--color: #ec2025">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Java-logo.png" />
+                        <h2>Java</h2>
+                    </a>
+                    <a href="https://www.typescriptlang.org/" class="icon-block" style="--color: #3178c6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" />
+                        <h2>Typescript</h2>
+                    </a>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/HTML" class="icon-block" style="--color: #db7444">
+                        <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-programming/512/html-512.png" />
+                        <h2>HTML</h2>
+                    </a>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS" class="icon-block" style="--color: #2c64f3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/1024px-CSS3_logo.svg.png" />
+                        <h2>CSS</h2>
+                    </a>
+                </div>
             </div>
-            <br>
-            <h2>Data Visualization</h2>
-            <br>
-
-            <div class="technoBlock list-group">
-                <a href="https://matplotlib.org/" class="icon-block" style="--color: #f68530">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/2048px-Created_with_Matplotlib-logo.svg.png" />
-                    <h2>MatplotLib</h2>
-                </a>
-                <a href="https://seaborn.pydata.org/" class="icon-block" style="--color: #5c7ca4">
-                    <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" />
-                    <h2>Seaborn</h2>
-                </a>
-                <a href="https://plotly.com/python/" class="icon-block" style="--color: #424d74">
-                    <img src="https://comptoir-du-libre.org/img/files/Softwares/Dash/avatar/logo-plotly.png" />
-                    <h2>Plotly</h2>
-                </a>
+            <div id="deep-learning">
+                <br>
+                <h2>Deep Learning</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://pytorch.org" class="icon-block" style="--color: #ec4c2c">
+                        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-linuxhq/events/PyTorch_Symbol_01_OrangeOnTransparent_nUWxXkQ.png" />
+                        <h2>Pytorch</h2>
+                    </a>
+                    <a href="https://keras.io" class="icon-block" style="--color: #d40505">
+                        <img src="https://www.logiciels.pro/wp-content/uploads/2021/05/keras-avis-prix-alternatives-logiciel.webp" />
+                        <h2>Keras</h2>
+                    </a>
+                    <a href="https://www.tensorflow.org/?hl=fr" class="icon-block" style="--color: #fc8c07">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/langfr-220px-Tensorflow_logo.svg.png" />
+                        <h2>Tensorflow</h2>
+                    </a>
+                    <a href="https://huggingface.co" class="icon-block" style="--color: #fbd31b">
+                        <img src="https://community.intersystems.com/sites/default/files/inline/images/sticker-2048w.png" />
+                        <h2>Huggingface</h2>
+                    </a>
+                    <a href="https://onnx.ai" class="icon-block" style="--color: #343434">
+                        <img src="https://artwork.lfaidata.foundation/projects/onnx/icon/color/onnx-icon-color.png" />
+                        <h2>Onnx</h2>
+                    </a>
+                    <a href="https://developer.nvidia.com/tensorrt" class="icon-block" style="--color: #78b80a">
+                        <img id="tensorrt" src="https://assets.nvidiagrid.net/ngc/logos/Tensorrt.png" />
+                        <h2 id="tensorrt-img">TensorRT</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="machine-learning">
+                <br>
+                <h2>Machine Learning</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://scikit-learn.org/stable/" class="icon-block" style="--color: #2596be">
+                        <img src="https://www.ambient-it.net/wp-content/uploads/2018/07/scikit-learn-175.png" />
+                        <h2>Scikit-learn</h2>
+                    </a>
+                    
+                </div>
+            </div>
+            <div id="data-viz">
+                <br>
+                <h2>Data Visualization</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://matplotlib.org/" class="icon-block" style="--color: #f68530">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/2048px-Created_with_Matplotlib-logo.svg.png" />
+                        <h2>MatplotLib</h2>
+                    </a>
+                    <a href="https://seaborn.pydata.org/" class="icon-block" style="--color: #5c7ca4">
+                        <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" />
+                        <h2>Seaborn</h2>
+                    </a>
+                    <a href="https://plotly.com/python/" class="icon-block" style="--color: #424d74">
+                        <img src="https://comptoir-du-libre.org/img/files/Softwares/Dash/avatar/logo-plotly.png" />
+                        <h2>Plotly</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="data-man">
+                <br>
+                <h2>Data Management</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://pandas.pydata.org/" class="icon-block" style="--color: #140454">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pandas_mark.svg/1200px-Pandas_mark.svg.png" />
+                        <h2>Pandas</h2>
+                    </a>
+                    <a href="https://numpy.org/" class="icon-block" style="--color: #4caccc">
+                        <img src="https://seeklogo.com/images/N/numpy-logo-479C24EC79-seeklogo.com.png" />
+                        <h2>Numpy</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="database">
+                <br>
+                <h2>Datadase</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="" class="icon-block" style="--color: #47a139">
+                        <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png" />
+                        <h2>MongoDB</h2>
+                    </a>
+                    <a href="https://rethinkdb.com/" class="icon-block" style="--color: #23a0bb">
+                        <img src="https://www.stackhero.io/assets/src/images/servicesLogos/openGraphVersions/rethinkdb.png?e21d717c" />
+                        <h2>RethinkDB</h2>
+                    </a>
+                    <a href="https://www.mysql.com/fr/" class="icon-block" style="--color: #f68530">
+                        <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" />
+                        <h2>MySQL</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="web-frontend">
+                <br>
+                <h2>Web (Frontend)</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://fr.legacy.reactjs.org/" class="icon-block" style="--color: #04dcfc">
+                        <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" />
+                        <h2>React</h2>
+                    </a>
+                    <a href="https://getbootstrap.com/" class="icon-block" style="--color: #5c3c7c">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" />
+                        <h2>Bootstrap</h2>
+                    </a>
+                    <a href="https://mui.com/" class="icon-block" style="--color: #047cfc">
+                        <img src="https://mui.com/static/logo.png" />
+                        <h2>Mui</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="web-backend">
+                <br>
+                <h2>Web (Backend)</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://expressjs.com/fr/" class="icon-block" style="--color: #0b0b0b">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" />
+                        <h2>ExpressJS</h2>
+                    </a>
+                    <a href="https://nestjs.com/" class="icon-block" style="--color: #e4244c">
+                        <img src="https://nestjs.com/logo-small.ede75a6b.svg" />
+                        <h2>NestJS</h2>
+                    </a>
+                    <a href="https://flask.palletsprojects.com/en/3.0.x/" class="icon-block" style="--color: #040404">
+                        <img src="https://www.svgrepo.com/show/473611/flask.svg" />
+                        <h2>Flask</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="web-scraping">
+                <br>
+                <h2>Web-Scraping</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://selenium-python.readthedocs.io/locating-elements.html" class="icon-block" style="--color: #44b42c">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" />
+                        <h2>Selenium</h2>
+                    </a>
+                    <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="icon-block" style="--color: #040404">
+                        <img src="https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/6.1.jpg" />
+                        <h2>Beautiful Soup</h2>
+                    </a>
+                    <a href="https://pptr.dev/" class="icon-block" style="--color: #04daa2">
+                        <img src="https://www.svgrepo.com/show/354228/puppeteer.svg" />
+                        <h2>Puppeteer</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re" class="icon-block" style="--color: #040404">
+                        <img src="https://cdn.icon-icons.com/icons2/2148/PNG/512/regex_icon_132036.png" />
+                        <h2>Regex</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="project-man">
+                <br>
+                <h2>Project Management</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://github.com/" class="icon-block" style="--color: #040404">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+                        <h2>Github</h2>
+                    </a>
+                    <a href="https://about.gitlab.com/" class="icon-block" style="--color: #fb6d24">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-gitlab-282507.png?f=webp" />
+                        <h2>Gitlab</h2>
+                    </a>
+                    <a href="https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=144583572237&campaign=19313890934&creative=641977829458&device=c&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p74602912889&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xTC_DU-3AMQczoLOwdQ3DKRCBgw2rdp3FRIE9_NuzqXus7c17PvTYEaAsHCEALw_wcB&gclsrc=aw.ds" class="icon-block" style="--color: #136ce4">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png" />
+                        <h2>Jira</h2>
+                    </a>
+                    <a href="https://todoist.com/fr" class="icon-block" style="--color: #e44332">
+                        <img src="https://static-00.iconduck.com/assets.00/todoist-icon-2048x2048-6xd8pwo3.png" />
+                        <h2>ToDoIst</h2>
+                    </a>
+                    <a href="https://trello.com/fr" class="icon-block" style="--color: #0484d1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuyR3iLqPZc9Oaem6myEQ7rp2iHugBg3b9q-uCXWRvag&s" />
+                        <h2>Trello</h2>
+                    </a>
+                    <a href="https://www.gitkraken.com/" class="icon-block" style="--color: #18847c">
+                        <img src="https://grafikart.fr/uploads/icons/gitkraken.svg" />
+                        <h2>Gitkraken</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="project-com">
+                <br>
+                <h2>Project Communication</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://www.microsoft.com/fr-fr/microsoft-teams/group-chat-software" class="icon-block" style="--color: #6c84fb">
+                        <img src="https://phanphoibanquyen.com/wp-content/uploads/2023/10/teams_00.png" />
+                        <h2>MyTeams</h2>
+                    </a>
+                    <a href="https://discord.com/" class="icon-block" style="--color: #8c9eff">
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/5/57/Discord_logo_old.png" />
+                        <h2>Discord</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="software">
+                <br>
+                <h2>Software</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://www.electronjs.org/fr/" class="icon-block" style="--color: #4c848c">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/electronjs_logo_icon_168222.png" />
+                        <h2>Electron</h2>
+                    </a>
+                    <a href="https://www.sfml-dev.org/download/csfml/" class="icon-block" style="--color: #8ccb3b">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/SFML_Logo.svg/1024px-SFML_Logo.svg.png" />
+                        <h2>CSFML</h2>
+                    </a>
+                    <a href="https://www.pygame.org/wiki/about" class="icon-block" style="--color: #f9dd22">
+                        <img src="https://user-images.githubusercontent.com/46412508/170405943-e75458ec-6cb4-462e-91ba-43c861a3d6cf.png" />
+                        <h2>Pygame</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="mobile">
+                <br>
+                <h2>Mobile</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://reactnative.dev/" class="icon-block" style="--color: #04dcfc">
+                        <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" />
+                        <h2>React Native</h2>
+                    </a>
+                    <a href="https://developer.android.com/studio" class="icon-block" style="--color: #4383f2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Android_Studio_Logo_%282023%29.svg/1200px-Android_Studio_Logo_%282023%29.svg.png" />
+                        <h2>Android Studio</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="research">
+                <br>
+                <h2>Research</h2>
+                <br>
+    
+                <div class="technoBlock list-group">
+                    <a href="https://scholar.google.com/" class="icon-block" style="--color: #3c78dc">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/768px-Google_Scholar_logo.svg.png" />
+                        <h2>Google Scholar</h2>
+                    </a>
+                    <a href="https://paperswithcode.com/sota" class="icon-block" style="--color: #28cccc">
+                        <img src="https://paperswithcode.com/static/logo.png" />
+                        <h2>Paper with code</h2>
+                    </a>
+                    <a href="https://www.kaggle.com/" class="icon-block" style="--color: #28bcfc">
+                        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" />
+                        <h2>Kaggle</h2>
+                    </a>
+                    <a href="https://www.ieee.org/" class="icon-block" style="--color: #04649c">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/ieee_logo_icon_169992.png" />
+                        <h2>IEEE</h2>
+                    </a>
+                    <a href="https://arxiv.org/" class="icon-block" style="--color: #ab142c">
+                        <img src="https://static.arxiv.org/icons/twitter/arxiv-logo-twitter-square.png" />
+                        <h2>Arxiv</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="devops">
+                <br>
+                <h2>Dev Ops</h2>
+                <br>
+                <div class="technoBlock list-group">
+                    <a href="https://www.docker.com/" class="icon-block" style="--color: #0c9cec">
+                        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" />
+                        <h2>Docker</h2>
+                    </a>
+                    <a href="https://www.jenkins.io/" class="icon-block" style="--color: #c93f39">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/jenkins_logo_icon_170552.png" />
+                        <h2>Jenkins</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="data-type">
+                <br>
+                <h2>Data Type</h2>
+                <br>
+                <div class="technoBlock list-group">
+                    <a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" class="icon-block" style="--color: #272727">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png" />
+                        <h2>JSON</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Extensible_Markup_Language" class="icon-block" style="--color: #fc7c24">
+                        <img src="https://static-00.iconduck.com/assets.00/xml-icon-896x1024-cd50izvw.png" />
+                        <h2>Xml</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Comma-separated_values#:~:text=Comma%2Dseparated%20values%2C%20connu%20sous,valeurs%20s%C3%A9par%C3%A9es%20par%20des%20virgules." class="icon-block" style="--color: #1fb35b">
+                        <img src="https://static-00.iconduck.com/assets.00/csv-icon-1791x2048-ot22nr8i.png" />
+                        <h2>CSV</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Waveform_Audio_File_Format" class="icon-block" style="--color: #040404">
+                        <img src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Music-Audio-Wave-icon.png" />
+                        <h2>Wav</h2>
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Musical_Instrument_Digital_Interface" class="icon-block" style="--color: #040404">
+                        <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/midi_icon_137391.png" />
+                        <h2>Midi</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="simulation">
+                <br>
+                <h2>Simulation</h2>
+                <br>
+                <div class="technoBlock list-group">
+                    <a href="https://www.ros.org/" class="icon-block" style="--color: #15253e">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Robot_Operating_System_logo.svg/800px-Robot_Operating_System_logo.svg.png" />
+                        <h2>ROS2</h2>
+                    </a>
+                    <a href="https://unity.com/fr" class="icon-block" style="--color: #040404">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/unity-69-logo-black-and-white.png" />
+                        <h2>Unity</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="ide">
+                <br>
+                <h2>IDE</h2>
+                <br>
+                <div class="technoBlock list-group">
+                    <a href="https://code.visualstudio.com/" class="icon-block" style="--color: #047ccc">
+                        <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png" />
+                        <h2>VScode</h2>
+                    </a>
+                    <a href="https://www.gnu.org/software/emacs/" class="icon-block" style="--color: #8463bb">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/EmacsIcon.svg/1024px-EmacsIcon.svg.png" />
+                        <h2>Emacs</h2>
+                    </a>
+                    <a href="https://www.sublimetext.com/" class="icon-block" style="--color: #fa9804">
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/7/78/Sublime_text_logo.png" />
+                        <h2>SublimeText</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="os">
+                <br>
+                <h2>OS (Operating System)</h2>
+                <br>
+                <div class="technoBlock list-group">
+                    <a href="https://fedoraproject.org/fr/" class="icon-block" style="--color: #2c4474">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fedora_logo.svg/2048px-Fedora_logo.svg.png" />
+                        <h2>Fedora</h2>
+                    </a>
+                    <a href="https://www.ubuntu-fr.org/" class="icon-block" style="--color: #dc4b14">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/2048px-Logo-ubuntu_cof-orange-hex.svg.png" />
+                        <h2>Ubuntu</h2>
+                    </a>
+                    <a href="" class="icon-block" style="--color: #10b4ec">
+                        <img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/windows_104558.png" />
+                        <h2>Windows</h2>
+                    </a>
+                    <a href="https://www.debian.org/index.fr.html" class="icon-block" style="--color: #dc0554">
+                        <img src="https://free-astro.org/images/0/04/Debian_logo.png" />
+                        <h2>Debian</h2>
+                    </a>
+                </div>
             </div>
         </div>
     </body>

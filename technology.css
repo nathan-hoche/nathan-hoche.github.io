@@ -18,6 +18,11 @@ a:link {
     text-decoration: none;
 }
 
+#btn-list > button {
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
 .list-group-item:hover {
     opacity: 70%;
 }
