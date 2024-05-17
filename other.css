@@ -1,0 +1,120 @@
+body {
+    background-color: #1c1c1c;
+}
+
+b {
+    color: rgb(95, 156, 235);
+}
+
+b-basic {
+    font-weight: bold;
+}
+
+h2  {
+    color: white;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#btn-list > button {
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.list-group-item:hover {
+    opacity: 70%;
+}
+
+.icon-block {
+    width: 400px;
+    height: 100px;
+    padding-left: 0px;
+    padding-top: 0px;
+    border-radius: 15px;
+    background-color: #212529;
+    border: 0.1rem solid white;
+}
+
+
+.icon-block > h2 {
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+
+.icon-block:hover {
+    opacity: 70%;
+}
+
+.technoBlock {
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.cardBlock {
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.cardBlock > .card {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: white;
+    min-width: 288px;
+}
+
+.card > .card-header {
+    background-color:#2c2c2d;
+}
+
+.card > .card-body {
+    background-color:#36393d;
+}
+
+.badge {
+    border: 1px solid white;
+    font-size: small;
+}
+
+
+.technoBlock > a {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+#content {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content-text {
+    padding: 1.5%;
+}
+
+#picture {
+    width: 75%;
+    height: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-align {
+    text-align: center;
+}
+
